@@ -1,0 +1,14 @@
+--prep files
+--hdfs dfs -mkdir -p user/cloudera/project/yelp_data
+--hdfs dfs -copyFromLocal /home/cloudera/project/week1/*.json user/cloudera/project/yelp_data
+
+--check data
+--hdfs dfs -ls cloudera/project/yelp_data
+
+—-connect to beeline
+beeline - !connect jdbc:hive2://localhost:10000/default 
+
+—-hive -f business.hql
+
+
+

@@ -1,0 +1,29 @@
+ICREATE TABLE test_user(
+	votes STRUCT<funny : BIGINT, useful : BIGINT, cool : BIGINT>,
+	user_id STRING,
+	name STRING,
+	average_stars FLOAT,
+	review_count BIGINT,
+	type STRING
+)
+ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
+STORED AS TEXTFILE;
+LOAD DATA LOCAL INPATH '/home/cloudera/project/week1/yelp_training_set_user.json' OVERWRITE INTO TABLE test_business;
+
+
+CREATE TABLE test_checkin(
+checkin_info MAP<STRING, BITGNT>,
+type STRING,
+business_id STRING
+)
+
+CREATE TABLE test_review(
+votes STRUCT<funny : BIGINT, useful : BIGINT, cool : BIGINT>,
+user_id STRING,
+review_id STRING,
+stars FLOAT,
+date STRING,
+text STRING,
+type STRING,
+business_id
+)

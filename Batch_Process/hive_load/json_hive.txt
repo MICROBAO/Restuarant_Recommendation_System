@@ -1,0 +1,27 @@
+wget https://hive-json-serde.googlecode.com/files/hive-json-serde-0.2.jar
+
+# 添加jar包
+hive> add jar /home/heyuan.lhy/develop/wanke_http_test/hive-json-serde-0.2.jar;
+hive> 
+
+# 创建hive表
+CREATE TABLE test_json
+(
+    id BIGINT,
+    text STRING,
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.JsonSerde'
+STORED AS TEXTFILE
+;
+
+LOAD DATA LOCAL INPATH "test.json" OVERWRITE INTO TABLE test_json;
+
+
+version 2
+
+create table if not exists tweets(
+       text string comment 'tweet content',
+       created_at int comment 'the time the tweet issued',
+       user_id int comment 'user id')
+ROW FORMAT SERDE 'com.cloudera.hive.serde.JSONSerDe'
+LOCATION '/home/landen/UntarFile/hive-0.10.0/StorageTable' ;  

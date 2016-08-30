@@ -1,0 +1,17 @@
+Deserialization/Business.class
+MapReduce/CheckInMapReduce.class
+MapReduce/UserMapReduce$JsonMapper.class
+Deserialization/CheckIn.class
+Parser/JSONException.class
+Deserialization/ReviewWritable.class
+Deserialization/BusinessWritable.class
+MapReduce/BusinessMapReduce$JsonMapper.class
+MapReduce/CheckInMapReduce$JsonMapper.class
+Deserialization/User.class
+MapReduce/UserMapReduce.class
+MapReduce/ReviewMapReduce.class
+Deserialization/CheckInWritable.class
+MapReduce/BusinessMapReduce.class
+Deserialization/UserWritable.class
+MapReduce/ReviewMapReduce$JsonMapper.class
+Deserialization/Review.class

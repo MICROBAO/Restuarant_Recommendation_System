@@ -1,0 +1,6 @@
+--pig preparation 
+
+hdfs dfs -mkdir -p user/cloudera/project/yelp_data
+hdfs dfs -copyFromLocal /home/cloudera/project/week1/*.json user/cloudera/project/yelp_data
+hdfs dfs -ls user/cloudera/project/yelp_data
+hdfs dfs -mkdir -p user/cloudera/project/output/pig
